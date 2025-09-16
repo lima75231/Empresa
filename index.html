@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos de Bolos Caseiros - Sua Confeitaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sua Confeitaria</h1>
+        <p>Bolos caseiros feitos com carinho para você!</p>
+    </header>
+
+    <main>
+        <section class="order-form-container">
+            <h2>Faça seu Pedido</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Seu Telefone (com DDD, ex: 11987654321):</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="Ex: 11987654321" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cakeFlavor">Sabor do Bolo:</label>
+                    <select id="cakeFlavor" name="cakeFlavor" required>
+                        <option value="">Selecione um sabor</option>
+                        <option value="Chocolate com Brigadeiro">Chocolate com Brigadeiro</option>
+                        <option value="Cenoura com Chocolate">Cenoura com Chocolate</option>
+                        <option value="Fubá Cremoso">Fubá Cremoso</option>
+                        <option value="Limão Siciliano">Limão Siciliano</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryDate">Data de Retirada/Entrega:</label>
+                    <input type="date" id="deliveryDate" name="deliveryDate" required>
+                </div>
+
+                <button type="submit">Confirmar Pedido</button>
+            </form>
+            <p id="responseMessage" class="hidden"></p>
+        </section>
+
+        <section class="gallery">
+            <h2>Nossos Bolos</h2>
+            <div class="cake-item">
+                <p>Bolo de Cenoura com Chocolate</p>
+            </div>
+            <div class="cake-item">
+                <p>Bolo de Fubá Cremoso</p>
+            </div>
+             <div class="cake-item">
+                <p>Bolo Red Velvet</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sua Confeitaria. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
